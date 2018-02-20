@@ -15,12 +15,13 @@
 $user = $_POST['email'];
 $pass = $_POST['password'];
 
-$gebruikersnaam['piet@worldonline.nl'] = 'doetje123';
-$gebruikersnaam['klaas@carpets.nl'] = 'snoepje777';
-$gebruikersnaam['truushendriks@wegweg.nl'] = 'arkiearkie201';
+	$accounts = array('piet@worldonline.nl' => 'doetje123',
+		'klaas@carpets.nl' => 'snoepje777',
+		'truushendriks@wegweg.nl' => 'arkiearkie201');
+
 if(isset($_POST['submit'])){
-if(array_search($pass, $gebruikersnaam) === $user){
-   echo 'Welkom';
+if (isset($accounts[$user]) && $accounts[$user] == $pass){
+	echo "Welkom";
 }else{
 	echo "Sorry, geen toegang!";
 }

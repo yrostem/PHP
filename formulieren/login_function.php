@@ -15,10 +15,6 @@
 $user = $_POST['email'];
 $pass = $_POST['password'];
 
-$gebruikersnaam['piet@worldonline.nl'] = 'doetje123';
-$gebruikersnaam['klaas@carpets.nl'] = 'snoepje777';
-$gebruikersnaam['truushendriks@wegweg.nl'] = 'arkiearkie201';
-
 function login($user, $pass){
 	if($user == "piet@worldonline.nl" && $pass == "doetje123"){
 		echo "True";
